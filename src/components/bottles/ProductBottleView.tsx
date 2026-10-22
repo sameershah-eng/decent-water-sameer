@@ -15,7 +15,7 @@ interface ProductBottleViewProps {
 
 export const ProductBottleView: React.FC<ProductBottleViewProps> = ({
   bottleType,
-  className = 'w-full h-full',
+  className = 'w-auto h-full max-h-full max-w-full',
   animatedWater = false,
   tiltAngle = 0
 }) => {

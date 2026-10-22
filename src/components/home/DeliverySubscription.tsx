@@ -91,9 +91,9 @@ export const DeliverySubscription: React.FC = () => {
             {/* Right Column: 19L Bottle Visual + Delivery Van Thumbnail */}
             <div className="lg:col-span-5 flex flex-col items-center justify-center relative">
               <div className="relative w-full max-w-xs flex flex-col items-center">
-                {/* 19L Bottle Centerpiece */}
-                <div className="h-64 sm:h-72 flex items-center justify-center select-none">
-                  <Bottle19L className="h-full drop-shadow-2xl" />
+                <div className="h-60 sm:h-68 flex flex-col items-center justify-center select-none relative">
+                  <Bottle19L className="h-full w-auto max-h-full drop-shadow-2xl" />
+                  <div className="absolute -bottom-1 w-32 h-2.5 bg-black/20 rounded-[100%] blur-[2.5px] pointer-events-none" />
                 </div>
 
                 {/* Delivery Fleet Photo Overlay Card */}

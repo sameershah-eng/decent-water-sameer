@@ -169,9 +169,12 @@ export const CartDrawer: React.FC = () => {
                     key={item.product.id}
                     className="p-3 rounded-2xl border border-sky-100 bg-white shadow-sm flex items-center gap-3"
                   >
-                    {/* Bottle thumbnail */}
-                    <div className="w-14 h-16 shrink-0 bg-[#F4FAFF] rounded-xl flex items-center justify-center p-1 border border-sky-50">
-                      <ProductBottleView bottleType={item.product.bottleType} className="w-full h-full" />
+                    {/* Bottle thumbnail: fixed 64x64 box, bottle at 85% height */}
+                    <div className="w-16 h-16 shrink-0 bg-gradient-to-b from-[#F4FAFF] to-[#E6F3FF] rounded-2xl flex items-center justify-center p-1.5 border border-sky-100 relative overflow-hidden">
+                      <div className="h-[85%] flex items-center justify-center">
+                        <ProductBottleView bottleType={item.product.bottleType} />
+                      </div>
+                      <div className="absolute bottom-1 w-8 h-1 bg-[#0A2A6B]/10 rounded-[100%] blur-[1px] pointer-events-none" />
                     </div>
 
                     {/* Details */}

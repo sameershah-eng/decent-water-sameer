@@ -316,28 +316,29 @@ export const EliteHero: React.FC = () => {
             </div>
           </div>
 
-          {/* Interactive Bottle Display */}
+          {/* Interactive Bottle Display (max-height 60vh on desktop, 38svh on mobile) */}
           <motion.div
             key={selectedSize}
             initial={{ scale: 0.85, opacity: 0.4, y: 15 }}
             animate={{ scale: 1, opacity: 1, y: 0 }}
             transition={{ duration: 0.45, ease: 'easeOut' }}
-            className="relative flex items-center justify-center h-52 sm:h-64 lg:h-72 select-none"
+            className="relative flex items-center justify-center h-[36svh] lg:h-[48vh] max-h-[38svh] lg:max-h-[60vh] select-none"
             style={{
               transform: `perspective(600px) rotateY(${mouseTilt.x * 0.4}deg) rotateX(${-mouseTilt.y * 0.4}deg)`
             }}
           >
-            {selectedSize === '500ml' && <Bottle500 className="h-48 sm:h-56 lg:h-64" />}
-            {selectedSize === '1.5l' && <Bottle1500 className="h-52 sm:h-64 lg:h-72" animatedWater={true} />}
-            {selectedSize === '12l' && <Bottle12L className="h-48 sm:h-58 lg:h-64" />}
-            {selectedSize === '19l' && <Bottle19L className="h-52 sm:h-64 lg:h-70" />}
+            {selectedSize === '500ml' && <Bottle500 className="h-[78%] w-auto max-h-full" />}
+            {selectedSize === '1.5l' && <Bottle1500 className="h-full w-auto max-h-full" animatedWater={true} />}
+            {selectedSize === '12l' && <Bottle12L className="h-[92%] w-auto max-h-full" />}
+            {selectedSize === '19l' && <Bottle19L className="h-full w-auto max-h-full" />}
 
-            {/* Base water splash droplets */}
+            {/* Base water splash droplets & soft ground reflection */}
             <div className="absolute -bottom-2 inset-x-0 flex justify-center items-center gap-4 opacity-80 pointer-events-none">
               <span className="w-2.5 h-1.5 rounded-full bg-sky-300 blur-[0.5px]" />
               <span className="w-4 h-2 rounded-full bg-white/90 blur-[0.5px]" />
               <span className="w-2.5 h-1.5 rounded-full bg-sky-300 blur-[0.5px]" />
             </div>
+            <div className="absolute -bottom-1.5 w-36 h-2.5 bg-black/20 rounded-[100%] blur-[3px] pointer-events-none" />
           </motion.div>
 
           {/* Size Selector Chips & Quick Add Card */}

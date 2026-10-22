@@ -66,8 +66,13 @@ export const FeaturedProducts: React.FC<FeaturedProductsProps> = ({
           </div>
         </div>
 
-        {/* Product Cards Grid: 1 col on small phones, 2 on tablets, 3 to 4 on desktop */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        {/* Product Cards Grid:
+            < 480px: 1 card per row, max-w-[420px], centered
+            480px - 767px: 2 cards per row, gap 14px (gap-3.5)
+            768px - 1023px: 2 or 3 cards per row, gap 20px (gap-5)
+            1024px+: 3 or 4 cards per row, gap 24px (gap-6)
+        */}
+        <div className="grid grid-cols-1 min-[480px]:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3.5 md:gap-5 lg:gap-6 max-w-[420px] min-[480px]:max-w-none mx-auto">
           {filteredProducts.map(product => (
             <ProductCard key={product.id} product={product} />
           ))}
