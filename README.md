@@ -1,11 +1,77 @@
-<div align="center">
+# Decent Water — Production Marketing & Ordering Website
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+A high-performance, mobile-first brand and ordering website for **Decent Water**, manufactured and bottled at Ahdi, Tehsil Gujar Khan, District Rawalpindi, Punjab, Pakistan.
 
-  <h1>Built with AI Studio</h2>
+---
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+## 💧 Quick Start
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+```bash
+# 1. Install dependencies
+npm install
 
-</div>
+# 2. Run local development server (port 3000)
+npm run dev
+
+# 3. Compile & production build test
+npm run build
+```
+
+---
+
+## 📋 How to Update Prices & Phone Numbers
+
+All products, prices, discount badges, and plant contact numbers are located in **one central file**:
+👉 `src/data/products.ts`
+
+### 1. Changing Prices
+Inside `src/data/products.ts`, each product contains comments clearly indicating where to modify prices:
+```typescript
+{
+  id: 'dw-500ml-single',
+  name: '500 mL Bottle (Single)',
+  price: 50,       // MOCK PRICE: update regular price here
+  salePrice: 45,   // Optional: set promotional sale price
+  badge: 'Best Seller'
+}
+```
+
+### 2. Changing Phone Numbers & Delivery Fees
+At the bottom of `src/data/products.ts`, update `BUSINESS_INFO`:
+```typescript
+export const BUSINESS_INFO = {
+  brand: 'Decent Water',
+  owner: 'Sameer Afzal',
+  phone1: '0310 7956354',
+  phone2: '0345 4873545',
+  phone1Intl: '+923107956354',
+  phone2Intl: '+923454873545',
+  whatsappRaw: '923107956354',
+  address: 'Ahdi, Tehsil Gujar Khan, District Rawalpindi, Punjab, Pakistan',
+  freeDeliveryThreshold: 1500, // PKR
+  standardDeliveryFee: 100     // PKR
+};
+```
+
+---
+
+## 🚀 How to Deploy on Vercel
+
+1. Push the repository to GitHub.
+2. In your Vercel Dashboard, click **Add New Project** and import the repository.
+3. Framework Preset: **Vite**
+4. Root Directory: `./`
+5. Build Command: `npm run build`
+6. Output Directory: `dist`
+7. Click **Deploy**.
+
+> Note: The included `vercel.json` already contains SPA rewrites (`"rewrites": [{ "source": "/(.*)", "destination": "/" }]`) ensuring client-side routes (`/products`, `/about`, `/contact`) work on hard refresh.
+
+---
+
+## 🎨 Visual Identity & Assets
+
+- **Colors**: Deep Navy (`#0A2A6B`), Royal Blue (`#0B5FD6`), Sky Aqua (`#3FB4F5` & `#7FD8FF`), Ice White (`#F4FAFF`).
+- **Product Assets**: Pure React SVG vector components in `src/components/bottles/` guarantee crisp rendering across all screen densities without broken external image links.
+- **Client Flyers**: Saved in `/public/images/` and showcased in the interactive Campaign Gallery with click-to-zoom Lightbox.
+- **WhatsApp Checkout**: Builds an itemized, friendly WhatsApp order message directly to `wa.me/923107956354`.

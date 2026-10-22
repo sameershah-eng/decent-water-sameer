@@ -1,0 +1,6 @@
+{
+  "name": "Decent Water - Pure Bottled Drinking Water",
+  "description": "Premium multi-stage purified bottled water supplier in Gujar Khan and Rawalpindi. Single bottles, family packs, 12L & 19L dispenser refills delivered fast.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
