@@ -83,7 +83,7 @@ export const AboutPage: React.FC = () => {
           </div>
         </div>
 
-        {/* Owner Profile Section: Sameer Afzal */}
+        {/* Owner Profile Section: Sameer Afzaal */}
         <div className="rounded-3xl bg-white border border-sky-100 p-8 sm:p-12 shadow-sm">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
             <div className="md:col-span-4 flex flex-col items-center text-center">
@@ -93,7 +93,7 @@ export const AboutPage: React.FC = () => {
                 </div>
               </div>
               <h3 className="font-display font-black text-xl text-[#0A2A6B]">
-                Sameer Afzal
+                Sameer Afzaal
               </h3>
               <span className="text-xs font-bold text-[#0B5FD6] mt-0.5">
                 Owner & Founder, Decent Water

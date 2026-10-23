@@ -2,7 +2,7 @@
  * Decent Water Product Lineup & Pricing
  * Brand: Decent Water (Ahdi, Tehsil Gujar Khan, District Rawalpindi, Pakistan)
  * Phone / WhatsApp: 0310 7956354 / 0345 4873545
- * Owner: Sameer Afzal
+ * Owner: Sameer Afzaal
  */
 
 export type ProductCategory = 'all' | 'bottles' | 'cartons' | 'family' | 'large' | 'plans';
@@ -245,7 +245,7 @@ export const BUSINESS_INFO = {
   brand: 'Decent Water',
   tagline: 'Refresh Your Day Naturally',
   subTagline: 'Pure Hydration for Every Need',
-  owner: 'Sameer Afzal',
+  owner: 'Sameer Afzaal',
   phone1: '0310 7956354',
   phone2: '0345 4873545',
   phone1Intl: '+923107956354',
@@ -254,7 +254,7 @@ export const BUSINESS_INFO = {
   address: 'Ahdi, Tehsil Gujar Khan, District Rawalpindi, Punjab, Pakistan',
   owners: [
     { name: 'Ch Shoaib Zakir', phone: '+92 345 4873545', tel: '+923454873545' },
-    { name: 'Sameer Afzal', phone: '+92 333 5728466', tel: '+923335728466' }
+    { name: 'Sameer Afzaal', phone: '+92 333 5728466', tel: '+923335728466' }
   ],
   areas: ['Ahdi', 'Gujar Khan City', 'Mandrah', 'Sohawa', 'Rawalpindi Cantt & City', 'GT Road Belt'],
   freeDeliveryThreshold: 1500, // Rs.

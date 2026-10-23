@@ -70,7 +70,7 @@ export const ContactPage: React.FC = () => {
                     {BUSINESS_INFO.address}
                   </p>
                   <span className="text-[11px] font-semibold text-[#0B5FD6] block mt-1">
-                    Owner: Sameer Afzal
+                    Owner: Sameer Afzaal
                   </span>
                 </div>
               </div>

@@ -73,12 +73,12 @@ export const Footer: React.FC = () => {
                 </div>
 
                 <div className="p-2.5 rounded-xl bg-white/5 border border-white/10 hover:border-sky-400/40 transition-colors">
-                  <div className="text-xs font-semibold text-white">Sameer Afzal</div>
+                  <div className="text-xs font-semibold text-white">Sameer Afzaal</div>
                   <div className="mt-1">
                     <a
                       href="tel:+923335728466"
                       className="inline-flex items-center gap-1.5 text-xs text-sky-200 hover:text-white transition-colors group/tel"
-                      aria-label="Call Sameer Afzal at +92 333 5728466"
+                      aria-label="Call Sameer Afzaal at +92 333 5728466"
                     >
                       <Phone className="w-3.5 h-3.5 text-[#3FB4F5] group-hover/tel:text-emerald-400 transition-colors shrink-0" />
                       <span className="font-medium">+92 333 5728466</span>
@@ -201,7 +201,7 @@ export const Footer: React.FC = () => {
         {/* Bottom Bar: Copyright & Attribution */}
         <div className="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-sky-200/60 gap-3">
           <p>
-            © {currentYear} Decent Water. All rights reserved. Sameer Afzal, Owner.
+            © {currentYear} Decent Water. All rights reserved. Sameer Afzaal, Owner.
           </p>
           <div className="flex items-center gap-4 text-[11px]">
             <span>Ahdi, Tehsil Gujar Khan, District Rawalpindi</span>

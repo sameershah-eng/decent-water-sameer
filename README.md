@@ -41,7 +41,7 @@ At the bottom of `src/data/products.ts`, update `BUSINESS_INFO`:
 ```typescript
 export const BUSINESS_INFO = {
   brand: 'Decent Water',
-  owner: 'Sameer Afzal',
+  owner: 'Sameer Afzaal',
   phone1: '0310 7956354',
   phone2: '0345 4873545',
   phone1Intl: '+923107956354',

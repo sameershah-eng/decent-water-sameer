@@ -48,7 +48,7 @@ export const TestimonialsFaq: React.FC = () => {
     },
     {
       q: 'Can I order single cartons for weddings, parties, or bulk events?',
-      a: 'Yes! We regularly supply cartons of 500 mL and 1.5 L bottles for weddings, funeral gatherings, conferences, and school sports galas. Special wholesale discounts and refrigerated delivery dispatch can be coordinated by contacting Sameer Afzal via phone or WhatsApp.'
+      a: 'Yes! We regularly supply cartons of 500 mL and 1.5 L bottles for weddings, funeral gatherings, conferences, and school sports galas. Special wholesale discounts and refrigerated delivery dispatch can be coordinated by contacting Sameer Afzaal via phone or WhatsApp.'
     },
     {
       q: 'What payment methods do you accept?',
@@ -255,7 +255,7 @@ export const TestimonialsFaq: React.FC = () => {
           </div>
 
           <p className="text-[11px] text-sky-200/80 mt-4">
-            Plant & Dispatch: {BUSINESS_INFO.address} · Owner: Sameer Afzal
+            Plant & Dispatch: {BUSINESS_INFO.address} · Owner: Sameer Afzaal
           </p>
         </div>
       </div>
