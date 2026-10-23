@@ -252,6 +252,10 @@ export const BUSINESS_INFO = {
   phone2Intl: '+923454873545',
   whatsappRaw: '923107956354',
   address: 'Ahdi, Tehsil Gujar Khan, District Rawalpindi, Punjab, Pakistan',
+  owners: [
+    { name: 'Ch Shoaib Zakir', phone: '+92 345 4873545', tel: '+923454873545' },
+    { name: 'Sameer Afzal', phone: '+92 333 5728466', tel: '+923335728466' }
+  ],
   areas: ['Ahdi', 'Gujar Khan City', 'Mandrah', 'Sohawa', 'Rawalpindi Cantt & City', 'GT Road Belt'],
   freeDeliveryThreshold: 1500, // Rs.
   standardDeliveryFee: 100 // Rs.

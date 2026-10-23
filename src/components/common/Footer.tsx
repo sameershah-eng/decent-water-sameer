@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MapPin, Phone, MessageSquare, ShieldCheck, Mail } from 'lucide-react';
+import { MapPin, Phone, MessageSquare, ShieldCheck, Mail, Users } from 'lucide-react';
 import { BUSINESS_INFO } from '../../data/products';
 
 export const Footer: React.FC = () => {
@@ -51,8 +51,41 @@ export const Footer: React.FC = () => {
               <span>Certified RO & UV Disinfection</span>
             </div>
 
-            <div className="pt-2 text-xs text-sky-200">
-              <span className="font-semibold text-white">Owner & Founder:</span> Sameer Afzal
+            {/* Owners & Founders Section */}
+            <div className="pt-3 border-t border-white/10 space-y-2.5">
+              <h4 className="font-display font-bold text-xs uppercase tracking-wider text-[#7FD8FF] flex items-center gap-1.5">
+                <Users className="w-3.5 h-3.5 text-[#3FB4F5]" />
+                <span>Owners & Founders</span>
+              </h4>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-2">
+                <div className="p-2.5 rounded-xl bg-white/5 border border-white/10 hover:border-sky-400/40 transition-colors">
+                  <div className="text-xs font-semibold text-white">Ch Shoaib Zakir</div>
+                  <div className="mt-1">
+                    <a
+                      href="tel:+923454873545"
+                      className="inline-flex items-center gap-1.5 text-xs text-sky-200 hover:text-white transition-colors group/tel"
+                      aria-label="Call Ch Shoaib Zakir at +92 345 4873545"
+                    >
+                      <Phone className="w-3.5 h-3.5 text-[#3FB4F5] group-hover/tel:text-emerald-400 transition-colors shrink-0" />
+                      <span className="font-medium">+92 345 4873545</span>
+                    </a>
+                  </div>
+                </div>
+
+                <div className="p-2.5 rounded-xl bg-white/5 border border-white/10 hover:border-sky-400/40 transition-colors">
+                  <div className="text-xs font-semibold text-white">Sameer Afzal</div>
+                  <div className="mt-1">
+                    <a
+                      href="tel:+923335728466"
+                      className="inline-flex items-center gap-1.5 text-xs text-sky-200 hover:text-white transition-colors group/tel"
+                      aria-label="Call Sameer Afzal at +92 333 5728466"
+                    >
+                      <Phone className="w-3.5 h-3.5 text-[#3FB4F5] group-hover/tel:text-emerald-400 transition-colors shrink-0" />
+                      <span className="font-medium">+92 333 5728466</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
