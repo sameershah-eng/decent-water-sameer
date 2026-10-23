@@ -5,6 +5,7 @@ import { SizeLineup } from '../components/home/SizeLineup';
 import { FeaturedProducts } from '../components/products/FeaturedProducts';
 import { PurificationProcess } from '../components/home/PurificationProcess';
 import { WhoWeServe } from '../components/home/WhoWeServe';
+import { CustomBottlesTeaser } from '../components/home/CustomBottlesTeaser';
 import { DeliverySubscription } from '../components/home/DeliverySubscription';
 import { CampaignGallery } from '../components/home/CampaignGallery';
 import { TestimonialsFaq } from '../components/home/TestimonialsFaq';
@@ -29,6 +30,9 @@ export const HomePage: React.FC = () => {
 
       {/* 6. Who We Serve in Gujar Khan & Rawalpindi */}
       <WhoWeServe />
+
+      {/* 6B. Custom Bottles Teaser */}
+      <CustomBottlesTeaser />
 
       {/* 7. 19L Refill Delivery & Recurring Subscriptions */}
       <DeliverySubscription />

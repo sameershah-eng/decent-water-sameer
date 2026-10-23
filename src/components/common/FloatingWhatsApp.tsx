@@ -1,18 +1,28 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 import { MessageSquare } from 'lucide-react';
 import { BUSINESS_INFO } from '../../data/products';
 import { useCart } from '../../context/CartContext';
 
 export const FloatingWhatsApp: React.FC = () => {
   const { isDrawerOpen } = useCart();
+  const location = useLocation();
+
   if (isDrawerOpen) return null;
+
+  const isCustomBottlesPage = location.pathname === '/custom-bottles';
 
   const defaultMsg = encodeURIComponent(
     'Hello Decent Water! I would like to inquire about drinking water delivery to my home/office.'
   );
 
   return (
-    <aside aria-label="Quick contact" className="fixed bottom-20 md:bottom-6 right-5 z-30 select-none">
+    <aside
+      aria-label="Quick contact"
+      className={`fixed bottom-20 md:bottom-6 right-5 z-30 select-none ${
+        isCustomBottlesPage ? 'hidden md:block' : ''
+      }`}
+    >
       <a
         href={`https://wa.me/${BUSINESS_INFO.whatsappRaw}?text=${defaultMsg}`}
         target="_blank"

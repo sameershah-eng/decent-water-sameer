@@ -57,6 +57,7 @@ export const Navbar: React.FC = () => {
   const navLinks = [
     { label: 'Home', path: '/' },
     { label: 'Products', path: '/products' },
+    { label: 'Custom Bottles', path: '/custom-bottles' },
     { label: 'Why Us', path: '/#why-us' },
     { label: 'Process', path: '/#process' },
     { label: 'Delivery', path: '/#delivery' },
@@ -92,11 +93,11 @@ export const Navbar: React.FC = () => {
               }
         }
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex items-center justify-between gap-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex items-center justify-between gap-4 lg:gap-5 xl:gap-8">
           {/* ZONE 1: BRAND LOGO */}
           <Link
             to="/"
-            className="flex items-center gap-2.5 group select-none whitespace-nowrap shrink-0 transition-transform active:scale-95"
+            className="flex items-center gap-2 sm:gap-2.5 group select-none whitespace-nowrap shrink-0 transition-transform active:scale-95"
             aria-label="Decent Water Home"
           >
             {/* Water drop mark */}
@@ -155,7 +156,7 @@ export const Navbar: React.FC = () => {
           </Link>
 
           {/* ZONE 2: NAV LINKS (Desktop) */}
-          <nav className="hidden lg:flex items-center gap-7 text-[14px] font-semibold">
+          <nav className="hidden lg:flex items-center gap-3 xl:gap-5 2xl:gap-7 text-[13px] xl:text-[14px] font-semibold">
             {navLinks.map(link => {
               const isActive =
                 link.path === '/'

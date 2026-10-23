@@ -19,6 +19,7 @@ import { HomePage } from './pages/HomePage';
 import { ProductsPage } from './pages/ProductsPage';
 import { AboutPage } from './pages/AboutPage';
 import { ContactPage } from './pages/ContactPage';
+import { CustomBottles } from './pages/CustomBottles';
 
 export default function App() {
   const [loaderFinished, setLoaderFinished] = useState(false);
@@ -42,6 +43,7 @@ export default function App() {
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/products" element={<ProductsPage />} />
+              <Route path="/custom-bottles" element={<CustomBottles />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="*" element={<HomePage />} />

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Bottle330 } from './Bottle330';
 import { Bottle500 } from './Bottle500';
 import { Bottle1500 } from './Bottle1500';
 import { Bottle12L } from './Bottle12L';
@@ -7,7 +8,7 @@ import { FamilyPack } from './FamilyPack';
 import { CartonBox } from './CartonBox';
 
 interface ProductBottleViewProps {
-  bottleType: 'bottle500' | 'bottle1500' | 'familyPack' | 'bottle12L' | 'bottle19L' | 'carton';
+  bottleType: 'bottle330' | 'bottle500' | 'bottle1500' | 'familyPack' | 'bottle12L' | 'bottle19L' | 'carton';
   className?: string;
   animatedWater?: boolean;
   tiltAngle?: number;
@@ -20,6 +21,8 @@ export const ProductBottleView: React.FC<ProductBottleViewProps> = ({
   tiltAngle = 0
 }) => {
   switch (bottleType) {
+    case 'bottle330':
+      return <Bottle330 className={className} tiltAngle={tiltAngle} />;
     case 'bottle500':
       return <Bottle500 className={className} tiltAngle={tiltAngle} />;
     case 'bottle1500':

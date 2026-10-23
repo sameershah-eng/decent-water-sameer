@@ -1,17 +1,24 @@
 import React from 'react';
 import { DropLogo } from './DropLogo';
+import { CustomBottleLabel } from './CustomBottleLabel';
+import { CustomLabelData } from '../../data/customBottles';
 
 interface BottleProps {
   className?: string;
   tiltAngle?: number;
+  customLabel?: CustomLabelData;
+  id?: string;
 }
 
 export const Bottle500: React.FC<BottleProps> = ({
   className = 'w-auto h-full max-h-full max-w-full',
-  tiltAngle = 0
+  tiltAngle = 0,
+  customLabel,
+  id
 }) => {
   return (
     <svg
+      id={id}
       viewBox="24 6 92 306"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -71,46 +78,52 @@ export const Bottle500: React.FC<BottleProps> = ({
       <path d="M30 100 C45 96 95 96 110 100" stroke="#38BDF8" strokeWidth="1.2" strokeOpacity="0.7" />
       <ellipse cx="70" cy="132" rx="41" ry="4" stroke="#0284C7" strokeWidth="1.2" strokeOpacity="0.5" />
 
-      {/* Brand Label */}
-      <rect
-        x="29"
-        y="142"
-        width="82"
-        height="98"
-        rx="6"
-        fill="#FFFFFF"
-        fillOpacity="0.96"
-        stroke="#BAE6FD"
-        strokeWidth="1"
-      />
+      {/* Brand Label (Custom or Standard) */}
+      {customLabel ? (
+        <CustomBottleLabel x={29} y={142} width={82} height={98} rx={6} labelData={customLabel} />
+      ) : (
+        <>
+          <rect
+            x="29"
+            y="142"
+            width="82"
+            height="98"
+            rx="6"
+            fill="#FFFFFF"
+            fillOpacity="0.96"
+            stroke="#BAE6FD"
+            strokeWidth="1"
+          />
 
-      {/* Shared DropLogo component */}
-      <DropLogo x={38} y={146} scale={0.92} />
+          {/* Shared DropLogo component */}
+          <DropLogo x={38} y={146} scale={0.92} />
 
-      {/* Label Text below logo */}
-      <text
-        x="70"
-        y="224"
-        textAnchor="middle"
-        fill="#0A2A6B"
-        fontFamily="Plus Jakarta Sans, system-ui, sans-serif"
-        fontWeight="800"
-        fontSize="6"
-        letterSpacing="0.2"
-      >
-        Bottled Drinking Water
-      </text>
-      <text
-        x="70"
-        y="233"
-        textAnchor="middle"
-        fill="#0284C7"
-        fontFamily="Plus Jakarta Sans, system-ui, sans-serif"
-        fontWeight="700"
-        fontSize="5.4"
-      >
-        Net Volume 500 mL
-      </text>
+          {/* Label Text below logo */}
+          <text
+            x="70"
+            y="224"
+            textAnchor="middle"
+            fill="#0A2A6B"
+            fontFamily="Plus Jakarta Sans, system-ui, sans-serif"
+            fontWeight="800"
+            fontSize="6"
+            letterSpacing="0.2"
+          >
+            Bottled Drinking Water
+          </text>
+          <text
+            x="70"
+            y="233"
+            textAnchor="middle"
+            fill="#0284C7"
+            fontFamily="Plus Jakarta Sans, system-ui, sans-serif"
+            fontWeight="700"
+            fontSize="5.4"
+          >
+            Net Volume 500 mL
+          </text>
+        </>
+      )}
 
       {/* Lower ribs & base */}
       <ellipse cx="70" cy="248" rx="41" ry="4" stroke="#38BDF8" strokeWidth="1.2" strokeOpacity="0.7" />

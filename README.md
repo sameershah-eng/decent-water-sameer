@@ -55,6 +55,71 @@ export const BUSINESS_INFO = {
 
 ---
 
+## 🏷️ How to Configure Custom Branded Bottles
+
+All personalized bottle services, tiers, themes, and templates are in:
+👉 `src/data/customBottles.ts`
+
+### 1. Changing Custom Bottle Pricing Tiers
+Inside `src/data/customBottles.ts`, find `PRICING_TIERS`:
+```typescript
+export const PRICING_TIERS: PricingTier[] = [
+  {
+    id: 'starter',
+    name: 'Starter Order',
+    rangeLabel: '100 – 299 Bottles',
+    prices: {
+      '330ml': 65,  // // MOCK PRICE: confirm with client
+      '500ml': 75,  // // MOCK PRICE: confirm with client
+      '1500ml': 140 // // MOCK PRICE: confirm with client
+    }
+  },
+  {
+    id: 'event',
+    name: 'Event Pack',
+    rangeLabel: '300 – 999 Bottles',
+    badge: 'Most Popular',
+    prices: {
+      '330ml': 58,
+      '500ml': 68,
+      '1500ml': 125
+    }
+  },
+  {
+    id: 'bulk',
+    name: 'Bulk / Business',
+    rangeLabel: '1,000+ Bottles',
+    badge: 'Best Value',
+    prices: {
+      '330ml': 50,
+      '500ml': 60,
+      '1500ml': 110
+    }
+  }
+];
+```
+
+### 2. Changing Minimum Order Quantity
+Modify `MINIMUM_ORDER_BOTTLES` in `src/data/customBottles.ts`:
+```typescript
+export const MINIMUM_ORDER_BOTTLES = 100; // MOCK: confirm with client
+```
+
+### 3. Adding or Customizing Label Themes
+Modify or add themes in `LABEL_THEMES`:
+```typescript
+export const LABEL_THEMES: Record<LabelThemeId, LabelTheme> = {
+  royalBlue: { ... },
+  navyGold: { ... },
+  rosePink: { ... },
+  emeraldGreen: { ... },
+  maroon: { ... },
+  classicWhite: { ... }
+};
+```
+
+---
+
 ## 🚀 How to Deploy on Vercel
 
 1. Push the repository to GitHub.
